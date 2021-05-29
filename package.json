@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build:sit": "webpack --config webpack.sit.js",
-    "bulid:prod": "webpack --config webpack.prod.js"
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
   },
   "author": "zhuyang",
   "license": "ISC",
-  "dependencies":{
+  "dependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "@babel/runtime": "^7.8.3",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.8.3",
-    "babel-plugin-transform-runtime": "^6.23.0"
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "cross-env": "^7.0.3"
   }
 }

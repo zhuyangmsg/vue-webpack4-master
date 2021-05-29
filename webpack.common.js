@@ -2,12 +2,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const env = process.env.NODE_ENV || "";
 module.exports = {
     entry:"./src/main.js",
     output:{
         path:path.resolve(__dirname,"dist"),
         filename:"bundle.js",
-        publicPath: './'
+        publicPath: env?'./':'/'
     },
     module:{
         rules:[

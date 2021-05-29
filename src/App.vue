@@ -9,7 +9,7 @@
 export default {
   data(){
       return {
-          name: "zhuyang"
+          name: "zhuyang12345"
       }
   }
 }
